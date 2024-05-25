@@ -1,0 +1,5 @@
+Mongo DB on Cloud: https://cloud.mongodb.com/v2/665212761e41fc38647e09b2#/metrics/replicaSet/665214394e74181c238e98e2/explorer/mainDB/products/find
+Mongo Account: singhvij@duck.com Pass: Singh@1234
+
+Database user:
+User Id: admin pass: admin

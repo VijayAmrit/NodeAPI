@@ -11,7 +11,7 @@ app.get('/',(req, res)=>{
     res.send("Hello Node API--------> GET");
 });
 
-app.get('/product',async(req, res)=>{
+app.get('/products',async(req, res)=>{
     try {
         const product = await Product.find({});
         res.status(200).json(product);
@@ -20,7 +20,7 @@ app.get('/product',async(req, res)=>{
     }    
 });
 
-app.get('/product/:id',async(req, res)=>{
+app.get('/products/:id',async(req, res)=>{
     try {
         const {id} = req.params;
         const product = await Product.findById(id);
@@ -31,7 +31,7 @@ app.get('/product/:id',async(req, res)=>{
 });
 
 //Create new Product
-app.post('/product', async(req, res)=>{
+app.post('/products', async(req, res)=>{
     try {
         const product = await Product.create(req.body);
         res.status(200).json(product);
@@ -46,7 +46,7 @@ app.post('/product', async(req, res)=>{
 
 
 ///Update Product
-app.put('/product/:id', async(req, res)=>{
+app.put('/products/:id', async(req, res)=>{
     try {
         const {id} = req.params;
         const product = await Product.findByIdAndUpdate(id, req.body);
